@@ -27,11 +27,9 @@ jobs:
       run: |
         cd board-manager
         make
-        ls -l /
-        ls -l build/*
 
-#    - uses: actions/upload-artifact@v4
-#      with:
-#        name: sduino-release.zip
-#        path: build/outputs/apk/release/vita3k-${{ env.git_short_sha }}-release.apk
+    - uses: actions/upload-artifact@v4
+      with:
+        name: sduino-release.zip
+        path: sduino\board-manager\release
 
