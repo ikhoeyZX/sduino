@@ -1,7 +1,7 @@
 
 # build all tool binaries on a Linux 64 system
 #
-# Used system: Linux Mint 19
+# Used system: Fedora 38 and Windows 10 both 64bit
 #
 # This assumes that all required cross-compilation environments are properly
 # installed.
@@ -94,6 +94,6 @@ stm8flash-osx:
 stm8flash-windows:
 	make -C stm8flash CC=i686-w64-mingw32-gcc \
 		CFLAGS="-I../lib/windows -L../lib/windows" \
-		PLATFORM=w7 \
+		PLATFORM=w10 \
 		RELEASE=yes clean all
 	install -s -D stm8flash/stm8flash.exe $(BINDIR)/win/stm8flash.exe
