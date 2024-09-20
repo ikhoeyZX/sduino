@@ -8,7 +8,7 @@ or for Makefile-controlled builds.
  * [Project website](https://tenbaht.github.io/sduino/) for more
    information on supported hardware and the programming API
 
- * [github issue tracker](https://github.com/tenbaht/sduino/issues) for bug
+ * [github issue tracker](https://github.com/ikhoeyZX/sduino/issues) for bug
    reports and other issues tightly related to the repository content
 
 Since this project is based on the SDCC Small Devices C compiler, I called
