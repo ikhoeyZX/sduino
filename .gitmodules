@@ -1,7 +1,6 @@
 [submodule "tools/stm8gal"]
 	path = tools/stm8gal
-	url = https://github.com/tenbaht/stm8gal.git
-	branch = detectMode
+	url = https://github.com/gicking/stm8gal.git
 [submodule "tools/stm8flash"]
 	path = tools/stm8flash
 	url = git@github.com:tenbaht/stm8flash.git
