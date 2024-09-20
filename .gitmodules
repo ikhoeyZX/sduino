@@ -3,4 +3,4 @@
 	url = https://github.com/gicking/stm8gal.git
 [submodule "tools/stm8flash"]
 	path = tools/stm8flash
-	url = git@github.com:tenbaht/stm8flash.git
+	url = https://github.com/ikhoeyZX/stm8flash.git
