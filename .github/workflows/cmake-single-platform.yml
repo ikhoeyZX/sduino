@@ -31,5 +31,5 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: sduino-release.zip
-        path: board-manager\release
+        path: /home/runner/work/sduino/sduino/board-manager/release
 
