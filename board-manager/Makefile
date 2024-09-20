@@ -1,19 +1,19 @@
 # the required versions for the new build
-COREVERSION=0.5
-SDCCVERSION=11242
-TOOLSVERSION=2019.02.05
+COREVERSION=0.7
+SDCCVERSION=15009
+TOOLSVERSION=2024.09.20
 
 # default the tool version to be the current date as YYYY.MM.DD
 #TOOLSVERSION?=$(shell date '+%Y.%m.%d')
 
-BASEURL=https://github.com/tenbaht/sduino/releases/download/v$(COREVERSION)
+BASEURL=https://github.com/ikhoeyZX/sduino/releases/download/v$(COREVERSION)
 
 PACKAGEFILE=package_sduino_stm8_index.json
 
 # version for pre-release testing on my private server at home
-TESTPACKAGEFILE=package_testserver_index.json
-TESTBASEURL=http://knecht.fritz.box/sduino
-TESTBASEDIR=knecht:/var/www/html/sduino
+# TESTPACKAGEFILE=package_testserver_index.json
+# TESTBASEURL=http://knecht.fritz.box/sduino
+# TESTBASEDIR=knecht:/var/www/html/sduino
 
 # make sure these definitions are visible for the sub-makes
 export
