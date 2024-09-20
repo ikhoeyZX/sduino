@@ -25,7 +25,7 @@
                             "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_mingw32-2024.09.20.tar.bz2",
                             "archiveFileName": "sduino-tools_mingw32-2024.09.20.tar.bz2",
                             "checksum": "SHA-256:8512c91e36a0bca05eeee82c5118390978308c5907cf89db74a78b30a71eb92b",
-                            "size": "728822"
+                            "size": "728744"
                         }
                     ]
                 },
