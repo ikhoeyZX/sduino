@@ -1,6 +1,6 @@
 # This starter workflow is for a CMake project running on a single platform. There is a different starter workflow if you need cross-platform coverage.
 # See: https://github.com/actions/starter-workflows/blob/main/ci/cmake-multi-platform.yml
-name: Test package
+name: Create package
 
 on:
   push:
@@ -31,5 +31,5 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: sduino-release.zip
-        path: sduino\board-manager\release
+        path: board-manager\release
 
