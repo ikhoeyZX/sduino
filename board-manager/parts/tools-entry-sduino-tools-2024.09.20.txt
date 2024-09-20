@@ -6,26 +6,26 @@
                             "host": "i686-pc-linux-gnu",
                             "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_linux32-2024.09.20.tar.bz2",
                             "archiveFileName": "sduino-tools_linux32-2024.09.20.tar.bz2",
-                            "checksum": "SHA-256:84292707a265b68fa407cb90540626e775f283eecf7654a48941abad8002dffc",
-                            "size": "48932"
+                            "checksum": "SHA-256:52fc2eb5af74c98c4b2a4c7ff42156dba7e7e329036031dfd34f31ca90cff20c",
+                            "size": "48880"
                         },{
                             "host": "x86_64-pc-linux-gnu",
                             "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_linux64-2024.09.20.tar.bz2",
                             "archiveFileName": "sduino-tools_linux64-2024.09.20.tar.bz2",
-                            "checksum": "SHA-256:3adff7e01059e8fd94dd5f3492cbfae55177fbf2e00b0a3a5317bfa8a2d12528",
-                            "size": "48651"
+                            "checksum": "SHA-256:1127207655a88a22ebc27def544d4f5372e689c6bf5aab84ed3537d2e0789c99",
+                            "size": "48622"
                         },{
                             "host": "x86_64-apple-darwin",
                             "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_macosx-2024.09.20.tar.bz2",
                             "archiveFileName": "sduino-tools_macosx-2024.09.20.tar.bz2",
-                            "checksum": "SHA-256:1662ee66d1cf23a3885d97bbccfe56a2b07e198c1fe32ade910c6b0285af4c86",
-                            "size": "51652"
+                            "checksum": "SHA-256:3c965fbc38b2e726c0f6c248074c1cdd2b8311170e7f72720beb023a1ca55f25",
+                            "size": "51671"
                         },{
                             "host": "i686-mingw32",
                             "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_mingw32-2024.09.20.tar.bz2",
                             "archiveFileName": "sduino-tools_mingw32-2024.09.20.tar.bz2",
-                            "checksum": "SHA-256:3e25eecd71dc00293ced12bacc74a9478c90d52b8852f808d3a61a571ab720f1",
-                            "size": "729364"
+                            "checksum": "SHA-256:8512c91e36a0bca05eeee82c5118390978308c5907cf89db74a78b30a71eb92b",
+                            "size": "728822"
                         }
                     ]
                 },
