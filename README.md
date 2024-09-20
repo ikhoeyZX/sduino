@@ -31,7 +31,7 @@ instructions](https://tenbaht.github.io/sduino/usage/manual-install/).
 
 Start the Arduino-IDE. In *File->Preferences*, *Settings* tab, enter
 
-> https://github.com/ikhoeyZX/sduino/blob/v0.7/package_sduino_stm8_index.json
+> https://github.com/ikhoeyZX/sduino/blob/development/package_sduino_stm8_index.json
 
 as an *Additional Boards Manager URL*.
 
