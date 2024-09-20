@@ -45,6 +45,9 @@ $(COREFILE): | $(COREDIR)
 	echo "Generating the core archive file."
 	$(eval TMPDIR := $(shell mktemp -d))
 	cd ..; git archive -v HEAD:sduino/stm8|tar -x -C $(TMPDIR)
+	echo ===============================
+	ls -l
+	echo ===============================
 	sed -i '/^tools\.stm8/ s#{runtime.hardware.path}/tools#{runtime.tools.STM8Tools.path}#' \
 		$(TMPDIR)/platform.txt
 	tar --xform s:'.':'sduino-core-$(COREVERSION)': -cvjfz $(COREFILE) -C $(TMPDIR) ..
