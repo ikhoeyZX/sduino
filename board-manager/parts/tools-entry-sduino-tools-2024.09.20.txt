@@ -1,0 +1,31 @@
+                {
+                    "name": "STM8Tools",
+                    "version": "2024.09.20",
+                    "systems": [
+                        {
+                            "host": "i686-pc-linux-gnu",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_linux32-2024.09.20.tar.bz2",
+                            "archiveFileName": "sduino-tools_linux32-2024.09.20.tar.bz2",
+                            "checksum": "SHA-256:84292707a265b68fa407cb90540626e775f283eecf7654a48941abad8002dffc",
+                            "size": "48932"
+                        },{
+                            "host": "x86_64-pc-linux-gnu",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_linux64-2024.09.20.tar.bz2",
+                            "archiveFileName": "sduino-tools_linux64-2024.09.20.tar.bz2",
+                            "checksum": "SHA-256:3adff7e01059e8fd94dd5f3492cbfae55177fbf2e00b0a3a5317bfa8a2d12528",
+                            "size": "48651"
+                        },{
+                            "host": "x86_64-apple-darwin",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_macosx-2024.09.20.tar.bz2",
+                            "archiveFileName": "sduino-tools_macosx-2024.09.20.tar.bz2",
+                            "checksum": "SHA-256:1662ee66d1cf23a3885d97bbccfe56a2b07e198c1fe32ade910c6b0285af4c86",
+                            "size": "51652"
+                        },{
+                            "host": "i686-mingw32",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_mingw32-2024.09.20.tar.bz2",
+                            "archiveFileName": "sduino-tools_mingw32-2024.09.20.tar.bz2",
+                            "checksum": "SHA-256:3e25eecd71dc00293ced12bacc74a9478c90d52b8852f808d3a61a571ab720f1",
+                            "size": "729364"
+                        }
+                    ]
+                },

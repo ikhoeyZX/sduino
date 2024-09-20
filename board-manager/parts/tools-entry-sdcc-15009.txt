@@ -1,0 +1,13 @@
+                {
+                    "name": "sdcc",
+                    "version": "build.15009",
+                    "systems": [
+                        {
+                            "host": "",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sdcc*15009.*",
+                            "archiveFileName": "sdcc*15009.*",
+                            "checksum": "SHA-256:",
+                            "size": ""
+                        }
+                    ]
+                },

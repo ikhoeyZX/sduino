@@ -12,6 +12,36 @@
                 {
                     "name": "Sduino STM8 plain C core (non-C++)",
                     "architecture": "stm8",
+                    "version": "0.7",
+                    "category": "Contributed",
+                    "boards": [
+                        {"name": "STM8S103F3 Breakout Board"},
+                        {"name": "STM8S105C6 Discovery Board"},
+                        {"name": "STM8S105K4T6 Breakout Board"},
+                        {"name": "sduino UNO (STM8S105K6)"},
+                        {"name": "sduino MB (STM8S208MBT6B)"},
+                        {"name": "STM8S105S6 Custom Board"}
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "name": "STM8Tools",
+                            "version": "2024.09.20",
+                            "packager": "sduino"
+                        },
+                        {
+                            "name": "sdcc",
+                            "version": "build.15009",
+                            "packager": "sduino"
+                        }
+                    ],
+                    "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-core-0.7.tar.bz2",
+                    "archiveFileName": "sduino-core-0.7.tar.bz2",
+                    "checksum": "SHA-256:9e996cc48c848ab1cae1d1e973b396fff661a79db0644f0d1c3f30d98501ecd1",
+                    "size": "2192221"
+                },
+                {
+                    "name": "Sduino STM8 plain C core (non-C++)",
+                    "architecture": "stm8",
                     "version": "0.5",
                     "category": "Contributed",
                     "boards": [
@@ -204,6 +234,37 @@
             "tools" : [
                 {
                     "name": "STM8Tools",
+                    "version": "2024.09.20",
+                    "systems": [
+                        {
+                            "host": "i686-pc-linux-gnu",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_linux32-2024.09.20.tar.bz2",
+                            "archiveFileName": "sduino-tools_linux32-2024.09.20.tar.bz2",
+                            "checksum": "SHA-256:84292707a265b68fa407cb90540626e775f283eecf7654a48941abad8002dffc",
+                            "size": "48932"
+                        },{
+                            "host": "x86_64-pc-linux-gnu",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_linux64-2024.09.20.tar.bz2",
+                            "archiveFileName": "sduino-tools_linux64-2024.09.20.tar.bz2",
+                            "checksum": "SHA-256:3adff7e01059e8fd94dd5f3492cbfae55177fbf2e00b0a3a5317bfa8a2d12528",
+                            "size": "48651"
+                        },{
+                            "host": "x86_64-apple-darwin",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_macosx-2024.09.20.tar.bz2",
+                            "archiveFileName": "sduino-tools_macosx-2024.09.20.tar.bz2",
+                            "checksum": "SHA-256:1662ee66d1cf23a3885d97bbccfe56a2b07e198c1fe32ade910c6b0285af4c86",
+                            "size": "51652"
+                        },{
+                            "host": "i686-mingw32",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sduino-tools_mingw32-2024.09.20.tar.bz2",
+                            "archiveFileName": "sduino-tools_mingw32-2024.09.20.tar.bz2",
+                            "checksum": "SHA-256:3e25eecd71dc00293ced12bacc74a9478c90d52b8852f808d3a61a571ab720f1",
+                            "size": "729364"
+                        }
+                    ]
+                },
+                {
+                    "name": "STM8Tools",
                     "version": "2019.02.05",
                     "systems": [
                         {
@@ -230,37 +291,6 @@
                             "archiveFileName": "sduino-tools_mingw32-2019.02.05.tar.bz2",
                             "checksum": "SHA-256:35d76fb968ac7998ec798502be597d7b234ceddb5c2bcb439d8f24711bd34064",
                             "size": "418464"
-                        }
-                    ]
-                },
-                {
-                    "name": "STM8Tools",
-                    "version": "2019.01.15",
-                    "systems": [
-                        {
-                            "host": "i686-pc-linux-gnu",
-                            "url": "https://github.com/tenbaht/sduino/releases/download/v0.5.0-pre1/sduino-tools_linux32-2019.01.15.tar.bz2",
-                            "archiveFileName": "sduino-tools_linux32-2019.01.15.tar.bz2",
-                            "checksum": "SHA-256:25a652b1319ff711c2c47af065aa2786a38b71151e0b3e839a81d1084509afaf",
-                            "size": "45038"
-                        },{
-                            "host": "x86_64-pc-linux-gnu",
-                            "url": "https://github.com/tenbaht/sduino/releases/download/v0.5.0-pre1/sduino-tools_linux64-2019.01.15.tar.bz2",
-                            "archiveFileName": "sduino-tools_linux64-2019.01.15.tar.bz2",
-                            "checksum": "SHA-256:12917e22acccc882a2b777e7883163c1938da3e21f68433dd1f9157f865950cf",
-                            "size": "45664"
-                        },{
-                            "host": "x86_64-apple-darwin",
-                            "url": "https://github.com/tenbaht/sduino/releases/download/v0.5.0-pre1/sduino-tools_macosx-2019.01.15.tar.bz2",
-                            "archiveFileName": "sduino-tools_macosx-2019.01.15.tar.bz2",
-                            "checksum": "SHA-256:786267e3ee2aea3b4b50a00bfdc49244727e95f1f05a44b135139744ffe24a5e",
-                            "size": "48036"
-                        },{
-                            "host": "i686-mingw32",
-                            "url": "https://github.com/tenbaht/sduino/releases/download/v0.5.0-pre1/sduino-tools_mingw32-2019.01.15.tar.bz2",
-                            "archiveFileName": "sduino-tools_mingw32-2019.01.15.tar.bz2",
-                            "checksum": "SHA-256:36979e642e75ecf6ea26e4a15e263ddb4ee9b1b4eaec4756514c6062bdface6a",
-                            "size": "414118"
                         }
                     ]
                 },
@@ -373,6 +403,19 @@
                             "archiveFileName": "sduino-tools_mingw32-2017.10.21.tar.bz2",
                             "checksum": "SHA-256:dfdc7364a0d6749d3d1693ce5b5311ace4d80425225c98a90c5c527e375d1ecd",
                             "size": "5541472"
+                        }
+                    ]
+                },
+                {
+                    "name": "sdcc",
+                    "version": "build.15009",
+                    "systems": [
+                        {
+                            "host": "",
+                            "url": "https://github.com/ikhoeyZX/sduino/releases/download/v0.7/sdcc*15009.*",
+                            "archiveFileName": "sdcc*15009.*",
+                            "checksum": "SHA-256:",
+                            "size": ""
                         }
                     ]
                 },
