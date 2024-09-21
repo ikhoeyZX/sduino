@@ -1,3 +1,8 @@
+# STALLED since sdcc have bug
+
+sdcc can't read windows username **if** contains symbol or space in "-MDD" with "-o" command
+
+
 # Sduino: Small Devices Arduino
 
 **Getting started on the STM8 the easy way.**
