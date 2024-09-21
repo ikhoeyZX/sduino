@@ -145,6 +145,7 @@ mb208.build.board=STM8S_MB
 mb208.build.core=sduino
 mb208.build.variant=mb208
 
+
 ##############################################################
 
 stm8s105s6_custom.name=STM8S105S6 Custom Board

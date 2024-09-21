@@ -1194,42 +1194,42 @@ $(call show_separator)
 # library sources
 $(OBJDIR)/libs/%.c.$(OBJSUFFIX): $(ARDUINO_LIB_PATH)/%.c
 	@$(MKDIR) $(dir $@)
-	$(CC) "-Wp-MM $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
-#	$(CC) -MM -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+	$(CC) "-Wp-MMD $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+#	$(CC) -MMD -c $(CPPFLAGS) $(CFLAGS) $< -o $@
 
 $(OBJDIR)/libs/%.cpp.$(OBJSUFFIX): $(ARDUINO_LIB_PATH)/%.cpp
 	@$(MKDIR) $(dir $@)
-	$(CXX) -MM -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -MMD -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 $(OBJDIR)/libs/%.S.$(OBJSUFFIX): $(ARDUINO_LIB_PATH)/%.S
 	@$(MKDIR) $(dir $@)
-	$(CC) -MM -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
+	$(CC) -MMD -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
 
 $(OBJDIR)/platformlibs/%.c.$(OBJSUFFIX): $(ARDUINO_PLATFORM_LIB_PATH)/%.c
 	@$(MKDIR) $(dir $@)
-	$(CC) "-Wp-MM $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
-#	$(CC) -MM -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+	$(CC) "-Wp-MMD $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+#	$(CC) -MMD -c $(CPPFLAGS) $(CFLAGS) $< -o $@
 
 $(OBJDIR)/platformlibs/%.cpp.$(OBJSUFFIX): $(ARDUINO_PLATFORM_LIB_PATH)/%.cpp
 	@$(MKDIR) $(dir $@)
-	$(CXX) -MM -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -MMD -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 $(OBJDIR)/platformlibs/%.S.$(OBJSUFFIX): $(ARDUINO_PLATFORM_LIB_PATH)/%.S
 	@$(MKDIR) $(dir $@)
-	$(CC) -MM -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
+	$(CC) -MMD -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
 
 $(OBJDIR)/userlibs/%.cpp.$(OBJSUFFIX): $(USER_LIB_PATH)/%.cpp
 	@$(MKDIR) $(dir $@)
-	$(CXX) -MM -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -MMD -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 $(OBJDIR)/userlibs/%.c.$(OBJSUFFIX): $(USER_LIB_PATH)/%.c
 	@$(MKDIR) $(dir $@)
-	$(CC) "-Wp-MM $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
-#	$(CC) -MM -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+	$(CC) "-Wp-MMD $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+#	$(CC) -MMD -c $(CPPFLAGS) $(CFLAGS) $< -o $@
 
 $(OBJDIR)/userlibs/%.S.$(OBJSUFFIX): $(USER_LIB_PATH)/%.S
 	@$(MKDIR) $(dir $@)
-	$(CC) -MM -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
+	$(CC) -MMD -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
 
 ifdef COMMON_DEPS
     COMMON_DEPS := $(COMMON_DEPS) $(MAKEFILE_LIST)
@@ -1240,20 +1240,20 @@ endif
 # normal local sources
 $(OBJDIR)/%.c.$(OBJSUFFIX): %.c $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CC) "-Wp-MM $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
-#	$(CC) -MM -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+	$(CC) "-Wp-MMD $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+#	$(CC) -MMD -c $(CPPFLAGS) $(CFLAGS) $< -o $@
 
 $(OBJDIR)/%.cc.$(OBJSUFFIX): %.cc $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CXX) -MM -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -MMD -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 $(OBJDIR)/%.cpp.$(OBJSUFFIX): %.cpp $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CXX) -MM -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -MMD -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 $(OBJDIR)/%.S.$(OBJSUFFIX): %.S $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CC) -MM -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
+	$(CC) -MMD -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
 
 $(OBJDIR)/%.s.$(OBJSUFFIX): %.s $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
@@ -1267,35 +1267,35 @@ $(OBJDIR)/%.ino.$(OBJSUFFIX): %.ino $(COMMON_DEPS) | $(OBJDIR)
 	(echo '#include <$(ARDUINO_HEADER)>\n#line 1 "$<"'; \
 		echo "void main(void); void (*dummy_variable) () = main;"; \
 		cat $<) > "$(@:.$(OBJSUFFIX)=.c)"
-	$(CC) "-Wp-MM $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) "$(@:.$(OBJSUFFIX)=.c)" -o $@
-#	$(CXX) -x c++ -include $(ARDUINO_HEADER) -MM -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CC) "-Wp-MMD $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) "$(@:.$(OBJSUFFIX)=.c)" -o $@
+#	$(CXX) -x c++ -include $(ARDUINO_HEADER) -MMD -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 # generated assembly
 $(OBJDIR)/%.s: %.pde $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CXX) -x c++ -include $(ARDUINO_HEADER) -MM -S -fverbose-asm $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -x c++ -include $(ARDUINO_HEADER) -MMD -S -fverbose-asm $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 $(OBJDIR)/%.s: %.ino $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CXX) -x c++ -include $(ARDUINO_HEADER) -MM -S -fverbose-asm $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -x c++ -include $(ARDUINO_HEADER) -MMD -S -fverbose-asm $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 $(OBJDIR)/%.s: %.cpp $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CXX) -x c++ -include $(ARDUINO_HEADER) -MM -S -fverbose-asm $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -x c++ -include $(ARDUINO_HEADER) -MMD -S -fverbose-asm $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 # core files
 $(OBJDIR)/core/%.c.$(OBJSUFFIX): $(ARDUINO_CORE_PATH)/%.c $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CC) "-Wp-MM $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
-#	$(CC) -MM -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+	$(CC) "-Wp-MMD $(@:.$(OBJSUFFIX)=.d)" -c $(CPPFLAGS) $(CFLAGS) $< -o $@
+#	$(CC) -MMD -c $(CPPFLAGS) $(CFLAGS) $< -o $@
 
 $(OBJDIR)/core/%.cpp.$(OBJSUFFIX): $(ARDUINO_CORE_PATH)/%.cpp $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CXX) -MM -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
+	$(CXX) -MMD -c $(CPPFLAGS) $(CXXFLAGS) $< -o $@
 
 $(OBJDIR)/core/%.S.$(OBJSUFFIX): $(ARDUINO_CORE_PATH)/%.S $(COMMON_DEPS) | $(OBJDIR)
 	@$(MKDIR) $(dir $@)
-	$(CC) -MM -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
+	$(CC) -MMD -c $(CPPFLAGS) $(ASFLAGS) $< -o $@
 
 # various object conversions
 $(OBJDIR)/%.hex: $(OBJDIR)/%.elf $(COMMON_DEPS)
